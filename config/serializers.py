@@ -25,7 +25,7 @@ class AcessorioSerializer(ModelSerializer):
 class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
-        fields = "__all__"
+        fields = ["id", "nome"]
 
 class VeiculoSerializer(ModelSerializer):
     class Meta:

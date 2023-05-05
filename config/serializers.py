@@ -46,9 +46,10 @@ class VeiculoSerializer(ModelSerializer):
 class VeiculoDetailSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = ["ano", "cor", "preco"]
+        fields = "__all__"
+        depth = 2
 
 class VeiculoListSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = ["ano", "cor", "preco", "marca"]
+        fields = ["ano", "cor", "id", "marca", "modelo"]

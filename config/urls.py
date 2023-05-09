@@ -8,21 +8,11 @@ from garagem.views import MarcaViewSet, CategoriaViewSet, CorViewSet, AcessorioV
 
 router = DefaultRouter()
 router.register(r"marcas", MarcaViewSet)
-
-router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
-
-router = DefaultRouter()
-router.register(r"cor", CorViewSet)
-
-router = DefaultRouter()
-router.register(r"acessorio", AcessorioViewSet)
-
-router = DefaultRouter()
-router.register(r"modelo", ModeloViewSet)
-
-router = DefaultRouter()
-router.register(r"veiculo", VeiculoViewSet)
+router.register(r"cores", CorViewSet)
+router.register(r"acessorios", AcessorioViewSet)
+router.register(r"modelos", ModeloViewSet)
+router.register(r"veiculos", VeiculoViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

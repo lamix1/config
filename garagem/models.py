@@ -45,7 +45,8 @@ class Veiculo(models.Model):
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
     ano = models.IntegerField(default=0,  null=True)
     preco = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=True, blank=True)
-
+    acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
+    
     def __str__(self):
         return f"marca:{self.marca}, categoria:{self.categoria}, ano:{self.ano} cor:{self.cor}"
     

@@ -29,4 +29,4 @@ class VeiculoDetailSerializer(ModelSerializer):
 class VeiculoListSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = ["id", "modelo", "ano"]
+        fields = ["id", "modelo", "cor"]

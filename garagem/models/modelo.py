@@ -9,7 +9,7 @@ class Modelo(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="veiculo")
 
     def __str__(self):
-        return f"{self.nome} "
+        return f"{self.nome}"
 
     class Meta:
         verbose_name = "Modelo"

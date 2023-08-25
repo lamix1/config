@@ -12,7 +12,7 @@ class Veiculo(models.Model):
     descricao = models.CharField(max_length=100)
     preco = models.DecimalField(max_digits=10, decimal_places=2, default=0, null=True, blank=True)
     acessorios = models.ManyToManyField(Acessorio, related_name="veiculos")
-    capa = models.ManyToManyField(Image, related_name="+", null=True, blank=True, default=None,)
+    capa = models.ManyToManyField(Image, related_name="+",)
     
     def __str__(self):
         return f"{self.modelo}- {self.ano}"
